@@ -1,0 +1,13 @@
+.filter-container{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.filter-contact{
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.filter-contact:focus{
+    outline: 2px solid rgb(6, 51, 184);
+}
