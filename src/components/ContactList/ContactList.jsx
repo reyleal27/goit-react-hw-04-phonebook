@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 export class ContactList extends Component {
 
-
-
   render() {
     const { filterContact, deleteContact } = this.props;
     const filteredContacts = filterContact();

@@ -1,19 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FilterContactStyle.css';
 import PropTypes from 'prop-types';
 
 
-export class Filter extends Component {
-  handleFilterChange = e => {
+const Filter = ({filter}) => {
+  const handleFilterChange = e => {
     this.props.setFilter(e.target.value);
   };
-
-  componentWillUnmount() {
-    console.log('componentwillunmount')
-  }
-
-  render() {
-    const { filter } = this.props;
 
     return (
       <div className='filter-container'>
@@ -25,12 +18,14 @@ export class Filter extends Component {
           name="filter"
           placeholder="Search by name"
           value={filter}
-          onChange={this.handleFilterChange}
+          onChange={handleFilterChange}
         />
       </div>
     );
   }
-};
+
+
+export default Filter;
 
 Filter.propTypes = {
     filter: PropTypes.string.isRequired,
