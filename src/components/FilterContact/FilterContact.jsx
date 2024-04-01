@@ -3,14 +3,13 @@ import './FilterContactStyle.css';
 import PropTypes from 'prop-types';
 
 
-const Filter = ({filter}) => {
+const Filter = ({filter, setFilter}) => {
   const handleFilterChange = e => {
-    this.props.setFilter(e.target.value);
+    setFilter(e.target.value);
   };
 
     return (
-      <div className='filter-container'>
-        
+      <div className='filter-container'> 
         <p>Find Contacts by Name</p>
             <input
                 className='filter-contact'
@@ -24,10 +23,9 @@ const Filter = ({filter}) => {
     );
   }
 
-
-export default Filter;
-
 Filter.propTypes = {
     filter: PropTypes.string.isRequired,
     setFilter: PropTypes.func.isRequired,
 }
+export default Filter;
+
